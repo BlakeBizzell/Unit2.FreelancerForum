@@ -22,7 +22,7 @@ function updateFreelancerList() {
 }
 
 function updateAveragePrice() {
-  const averagePriceContainer = document.getElementById("averagePrice");
+  const averagePriceContainer = document.querySelector("#averagePrice");
   const totalStartingPrice = freelancers.reduce(
     (sum, freelancer) => sum + freelancer.price,
     0
@@ -40,7 +40,6 @@ function getRandomOccupation() {
 }
 
 function simulateNewFreelancer() {
-  // Simulating a new freelancer every few seconds
   setInterval(() => {
     const newFreelancer = {
       name: getRandomName(),
@@ -51,7 +50,7 @@ function simulateNewFreelancer() {
 
     updateFreelancerList();
     updateAveragePrice();
-  }, 5000); // Adjust the interval as needed
+  }, 5000);
 }
 
 function getRandomName() {
@@ -65,8 +64,8 @@ function getRandomName() {
     "Grace",
     "Hank",
   ];
-  const randomIndex = Math.floor(Math.random() * names.length);
-  return names[randomIndex];
+  const randomnames = Math.floor(Math.random() * names.length);
+  return names[randomnames];
 }
 
 function getRandomPrice() {
@@ -77,4 +76,3 @@ function getRandomPrice() {
 // Initial setup
 updateFreelancerList();
 simulateNewFreelancer();
-   
