@@ -75,4 +75,4 @@ function getRandomPrice() {
 
 // Initial setup
 updateFreelancerList();
-simulateNewFreelancer();
+simulateNewFreelancer();   
